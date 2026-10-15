@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const participantCount = document.createElement("span");
         participantCount.className = "participant-count";
-        participantCount.textContent = `${details.participants.length} signed up`;
+        const participantLabel = details.participants.length === 1 ? "participant" : "participants";
+        participantCount.textContent = `${details.participants.length} ${participantLabel}`;
 
         const participantList = document.createElement("ul");
         participantList.className = "participant-list";
